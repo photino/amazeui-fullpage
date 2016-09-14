@@ -1,6 +1,6 @@
 {
   "name": "amazeui-fullpage",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "Amaze UI 风格的单页滚动效果",
   "main": "dist/amazeui.fullpage.min.js",
   "style": "dist/amazeui.fullpage.min.css",
@@ -37,7 +37,7 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "amazeui": "^2.7.2"
+    "amazeui": "^2.7.0"
   },
   "browserify-shim": {
     "jquery": "global:jQuery"

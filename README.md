@@ -3,7 +3,7 @@
 - [使用示例](http://photino.github.io/amazeui-fullpage/docs/demo.html)
 - [API 文档](http://photino.github.io/amazeui-fullpage/docs/api.html)
 
-**使用说明：**
+## 使用说明
 
 1. 获取 Amaze UI fullpage
 

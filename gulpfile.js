@@ -11,7 +11,10 @@ var config = {
 
   // release task
   ghPages: {
-    src: 'dist/**/*'
+    src: 'dist/**/*',
+    options: {
+      branch: 'gh-pages'
+    }
   },
 
   // remote branch
@@ -46,7 +49,7 @@ var config = {
     },
     dist: function(file) {
       if (file.relative === 'index.html') {
-        return 'dist'
+        return 'dist';
       }
       return 'dist/docs';
     }
@@ -78,6 +81,3 @@ gulp.task('build', function (callback) {
 });
 
 gulp.task('default', ['build', 'server']);
-
-gulp.task('publish', ['build', 'release']);
-
