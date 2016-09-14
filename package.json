@@ -1,0 +1,45 @@
+{
+  "name": "amazeui-fullpage",
+  "version": "0.0.2",
+  "description": "Amaze UI 风格的单页滚动效果",
+  "main": "dist/amazeui.fullpage.min.js",
+  "style": "dist/amazeui.fullpage.min.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/photino/amazeui-fullpage.git"
+  },
+  "keywords": [
+    "amazeui-plugin",
+    "amaze-ui",
+    "AMUI",
+    "fullpage",
+    "jquery-plugin"
+  ],
+  "author": {
+    "name": "Zan Pan",
+    "email": "panzan89@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/photino/amazeui-fullpage/issues"
+  },
+  "homepage": "http://photino.github.io/amazeui-fullpage/",
+  "license": "MIT",
+  "devDependencies": {
+    "amazeui-doc-util": "latest",
+    "amazeui-gulp-tasks": "latest",
+    "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "amazeui": "^2.7.2"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  }
+}
