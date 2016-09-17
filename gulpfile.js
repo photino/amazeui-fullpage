@@ -38,7 +38,7 @@ var config = {
       pluginTitle: 'Amaze UI Fullpage',
       pluginDesc: 'Amaze UI风格的单页滚动效果',
       buttons: 'photino/amazeui-fullpage',
-      head: '<link rel="stylesheet" href="../amazeui-fullpage.min.css"/>'
+      head: '<link rel="stylesheet" href="../dist/amazeui-fullpage.min.css"/>'
     },
     rename: function(file) {
       file.basename = file.basename.toLowerCase();
@@ -51,7 +51,7 @@ var config = {
       if (file.relative === 'index.html') {
         return 'dist';
       }
-      return 'dist/docs';
+      return 'docs';
     }
   },
 
@@ -59,6 +59,9 @@ var config = {
   less: {
     src: './src/amazeui.fullpage.less',
     dist: './dist',
+    autoPrefixer: {
+      browsers: ['> 1%', 'IE 9']
+    },
     banner: true
   },
 
@@ -76,8 +79,13 @@ var config = {
 // init tasks
 tasks(gulp, config);
 
+gulp.task('copy', function() {
+  return gulp.src('./src/*.js')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('build', function (callback) {
-  runSequence('clean', ['less', 'uglify', 'markdown'], callback);
+  runSequence('clean', ['copy', 'uglify', 'less',  'markdown'], callback);
 });
 
 gulp.task('default', ['build', 'server']);
