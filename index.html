@@ -50,12 +50,17 @@
 <section class="amp-main">
   <div class="am-container amp-content">
     <h1><a name="amaze-ui-fullpage" class="anchor" href="#amaze-ui-fullpage"><span class="header-link"></span></a>Amaze UI Fullpage</h1><ul>
-<li><a href="http://photino.github.io/amazeui-fullpage/demo.html">使用示例</a></li>
+<li><a href="http://photino.github.io/amazeui-fullpage/docs/demo.html">使用示例</a><ol>
+<li><a href="http://photino.github.io/amazeui-fullpage/docs/demo-1.html">纯CSS实现</a></li>
+<li><a href="http://photino.github.io/amazeui-fullpage/docs/demo-2.html">纯CSS实现（带图片背景）</a></li>
+<li><a href="http://photino.github.io/amazeui-fullpage/docs/demo-3.html">自动循环播放（Data API）</a></li>
+</ol>
+</li>
 </ul>
 <h2><a name="shi-yong-shuo-ming" class="anchor" href="#shi-yong-shuo-ming"><span class="header-link"></span></a>使用说明</h2><ol>
 <li><p>获取 Amaze UI fullpage</p>
 <ul>
-<li><a href="http://photino.github.io/amazeui-fullpage/archive/master.zip">直接下载</a></li>
+<li><a href="https://github.com/photino/amazeui-fullpage/archive/master.zip">直接下载</a></li>
 <li>使用 NPM: <code>npm install amazeui-fullpage</code></li>
 </ul>
 </li>
@@ -64,11 +69,16 @@
 <div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"path/to/amazeui.min.css"</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"path/to/amazeui.fullpage.min.css"</span>/&gt;</span></code></pre></div></li>
 <li><p>引入 fullpage 插件（<code>dist</code> 目录下的 JS）：</p>
+<p>Amaze UI fullpage 中的JS文件并不是必须的，使用纯CSS就能实现最基本的单页滚动效果（需要浏览器支持<code>vw</code>和<code>vh</code>）。</p>
 <div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"path/to/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"path/to/amazeui.fullpage.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div></li>
 <li><p>初始化 fullpage:</p>
+<p>Amaze UI fullpage 也支持Data API。</p>
 <div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  $(<span class="hljs-string">'#fullpage'</span>).fullpage();
+  $(<span class="hljs-string">'.am-fullpage'</span>).fullpage({
+    autoplay: <span class="hljs-literal">true</span>,
+    interval: <span class="hljs-number">5000</span>
+  });
 });</code></pre></div></li>
 </ol>
 
