@@ -1,6 +1,6 @@
 {
   "name": "amazeui-fullpage",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Amaze UI 风格的单页滚动效果",
   "main": "dist/amazeui.fullpage.min.js",
   "style": "dist/amazeui.fullpage.min.css",
