@@ -38,7 +38,7 @@ var config = {
       pluginTitle: 'Amaze UI Fullpage',
       pluginDesc: 'Amaze UI风格的单页滚动效果',
       buttons: 'photino/amazeui-fullpage',
-      head: '<link rel="stylesheet" href="../dist/amazeui-fullpage.min.css"/>'
+      head: '<link rel="stylesheet" href="../dist/amazeui.fullpage.min.css"/>'
     },
     rename: function(file) {
       file.basename = file.basename.toLowerCase();
